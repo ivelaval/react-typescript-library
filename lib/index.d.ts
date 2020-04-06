@@ -1,2 +1,3 @@
-export declare function sum(a: number, b: number): number;
+import HelloWorld from "./HelloWorld/HelloWorld";
+export { HelloWorld };
 //# sourceMappingURL=index.d.ts.map

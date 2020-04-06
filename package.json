@@ -8,10 +8,13 @@
     "lib"
   ],
   "scripts": {
-    "build-typescript": "rm -r lib && tsc -p .",
-    "build-rollup": "rm -r lib && rollup -c",
+    "build:typescript": "tsc -p .",
+    "build:rollup": "rollup -c",
+    "watch": "rollup -cw",
     "test": "jest --watch",
-    "test:once": "jest"
+    "test:once": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "react",
@@ -27,11 +30,18 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^25.2.1",
     "@types/react": "^16.9.32",
     "@types/styled-components": "^5.0.1",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
@@ -41,12 +51,14 @@
     "react-dom": "^16.13.1",
     "rollup": "^2.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-gzip": "^2.3.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
-    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-typescript2": "^0.27.0",
     "styled-components": "^5.0.1",
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }
